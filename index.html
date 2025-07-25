@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF‑8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anubhav OS Web</title>
+  <title>Anubhav OS</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="loading.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="calc.js"></script>
+  <script defer src="music.js"></script>
+  <script defer src="settings.js"></script>
 </head>
 <body>
-  <div id="loading-screen">Loading…</div>
-  <div id="lock-screen" class="hidden">🔒 Swipe up to unlock</div>
+  <!-- Loading / Branding Screen -->
+  <div id="loading-screen">
+    <div id="brand">
+      Anubhav<br>
+      <a href="https://instagram.com/0anubhav0__" target="_blank" style="color:#aaa; font-size:0.8em; text-decoration:none;">@0anubhav0__</a>
+    </div>
+  </div>
+
+  <!-- Lock Screen -->
+  <div id="lock-screen" class="hidden">
+    <div class="lock-message">🔒 Tap to Unlock</div>
+  </div>
+
+  <!-- Desktop UI -->
   <div id="desktop" class="hidden">
     <div id="status-bar">
       <span id="time">12:00</span>
-      <span id="battery">🔋100%</span>
+      <span id="battery">🔋 100%</span>
     </div>
     <div id="apps">
-      <div class="app-icon" onclick="openCalculator()">Calculator</div>
-      <div class="app-icon" onclick="openMusic()">Music</div>
-      <div class="app-icon" onclick="openSettings()">Settings</div>
+      <div class="app-icon" onclick="openCalculator()">🧮 Calculator</div>
+      <div class="app-icon" onclick="openMusic()">🎵 Music</div>
+      <div class="app-icon" onclick="openSettings()">⚙️ Settings</div>
     </div>
     <div id="app-window" class="hidden"></div>
   </div>
-  <script src="loading.js"></script>
-  <script src="calc.js"></script>
-  <script src="music.js"></script>
-  <script src="settings.js"></script>
-  <script src="app.js"></script>
 </body>
 </html>
