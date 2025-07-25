@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anubhav OS</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anubhav OS Web</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="desktop">
-    <div class="icon" onclick="openApp('Notepad')">📝 Notepad</div>
+  <div id="loading-screen">Loading…</div>
+  <div id="lock-screen" class="hidden">🔒 Swipe up to unlock</div>
+  <div id="desktop" class="hidden">
+    <div id="status-bar">
+      <span id="time">12:00</span>
+      <span id="battery">🔋100%</span>
+    </div>
+    <div id="apps">
+      <div class="app-icon" onclick="openCalculator()">Calculator</div>
+      <div class="app-icon" onclick="openMusic()">Music</div>
+      <div class="app-icon" onclick="openSettings()">Settings</div>
+    </div>
+    <div id="app-window" class="hidden"></div>
   </div>
-
-  <div id="taskbar">Anubhav OS</div>
-
-  <script src="main.js"></script>
+  <script src="loading.js"></script>
+  <script src="calc.js"></script>
+  <script src="music.js"></script>
+  <script src="settings.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
